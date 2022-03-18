@@ -1,0 +1,18 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Artmoney
+{% endblock %}
+
+{% block main %}
+    <form action="/artmoney" method = "post">
+        <div class = "form-group">
+            <input name = "cash" min = '1' placeholder = "Add some money" type = "number">
+        </div>
+        <button class = "btn btn-primary" type = "submit">Add some money</button>
+    </form>
+
+
+
+
+{% endblock %}

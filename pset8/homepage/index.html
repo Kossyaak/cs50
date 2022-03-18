@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="shortcut icon" href="icon3.jpg" type="x-icon">
+		<link href="styles.css" rel="stylesheet">
+		<title>JDM legends</title>
+		 <script>
+        	document.addEventListener("DOMContentLoaded", function (event) 
+        {
+            var buttons = document.querySelectorAll(".button");
+            buttons.forEach(function (button) 
+            {
+                button.addEventListener("click", getAnswerButton);
+            })
+
+            inputField = document.querySelector('input')
+            checkButton = document.querySelector("#check");
+            checkButton.addEventListener('click', function (evt) 
+            {
+                if (inputField.value.toLowerCase() == "nissan") 
+                {
+                    document.location.href = 'nissan.html';
+                }
+                else if (inputField.value.toLowerCase() == "toyota") 
+                {
+                    document.location.href = 'toyota.html';
+                }
+                else if (inputField.value.toLowerCase() == "mazda") 
+                {
+                    document.location.href = 'mazda.html';
+                }
+                else if (inputField.value.toLowerCase() == "honda") 
+                {
+                    document.location.href = 'honda.html';
+                }
+                else if (inputField.value.toLowerCase() == "subaru") 
+                {
+                    document.location.href = 'subaru.html';
+                }
+                else if (inputField.value.toLowerCase() == "mitsubichi") 
+                {
+                    document.location.href = 'mitsubichi.html';
+                }
+                else if (inputField.value.toLowerCase() == "bmw") 
+                {
+                    alert( 'Пора в атвосервис' );
+                }
+            });
+        });
+  
+
+        </script>
+	</head>
+	<body>
+			</div>
+				<div class="section">
+                <h1>JDM CULTURE SITE</h1>
+                <hr>
+                <h2>Введите свою любимую японскую марку машины</h2>
+                <h1 id="return_part_2"></h1>
+                <input type="text">
+                <button id="check" class="input">Показать информацию</button>
+            	</div>
+        	</div>
+	</body>
+</html>

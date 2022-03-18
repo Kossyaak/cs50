@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <link href="/static/styles.css" rel="stylesheet">
+        <title>Дни рождения</title>
+    </head>
+    <body>
+        <div class="jumbotron">
+            <h1>Дни рождения</h1>
+        </div>
+        <div class="container">
+            <div class="section">
+
+                <h2>Когда у тебя день рождения?</h2>
+                <form action="/" method="POST">
+                <input name="name" type="text" placeholder="Имя" autocomplete="off" autofocus>
+                <input name="month" type="number" placeholder="Месяц" max="12" min="1" autocomplete="off" autofocus>
+                <input name="day" type="number" placeholder="День" max="31" min="1" autocomplete="off" autofocus>
+                <input type="submit" value="Добавить">
+            </form>
+                <!-- TODO: Create a form for users to submit a name, a month, and a day -->
+            </div>
+
+            <div class="section">
+
+                <h2>Все дни рождения</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Имя</th>
+                            <th>Дата рождения (месяц/день)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    {% for birthday in birthdays %}
+                    <tr>
+                        <td>{{ birthday.name }}</td>
+                        <td>{{ birthday.month}}/{{ birthday.day }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+                </table>
+            </div>
+        </div>
+    </body>
+</html>

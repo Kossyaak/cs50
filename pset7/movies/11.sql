@@ -1,0 +1,1 @@
+Select title from movies join ratings on movies.id = ratings.movie_id where id IN (select stars.movie_id from stars where person_id IN(select id from people where name like "Chadwick Boseman")) order by rating desc limit 5
